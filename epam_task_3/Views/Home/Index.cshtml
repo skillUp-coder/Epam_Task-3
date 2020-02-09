@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Store Books";
+}
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <main class="container-fluid bg-1" style="margin-top: 50px; margin-left:35%; margin-bottom: 500px">
+            <div class="row">
+                <div class="col-sm-6" style="border: black solid 1px; border-bottom: black solid 10px; ">
+                    @using (Html.BeginForm())
+                    {
+                        <p>Name:        @ViewBag.DataBooks.Name</p>
+                        <p>Ganre:       @ViewBag.DataGanres.Title</p>
+                        <p>Author:      @ViewBag.DataBooks.Author</p>
+                        <p>Description: @ViewBag.DataBooks.Description</p>
+                        <p>Code:        @ViewBag.DataBooks.Code</p>
+                        <p>Price:       @ViewBag.DataBooks.Price</p>
+
+
+
+                        @Html.ActionLink("Next", "Index", "Home", new { id = @ViewBag.DataIdNext }, null)
+                        <br />
+                    }
+
+
+                </div>
+            </div>
+        </main>
+        
+        
+    </body>
+    </html>
